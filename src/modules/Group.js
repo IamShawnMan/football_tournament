@@ -7,6 +7,7 @@ const groupSchema = new mongoose.Schema(
       type: String,
       require: true,
       trim: true,
+      require: true,
     },
     tournamentId: {
       type: mongoose.Schema.Types.ObjectId,

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { collections } from "../utils/dbNames";
+import { collections } from "../utils/dbNames.js";
 
 const teamsSchema = new mongoose.Schema({
   teamName: {

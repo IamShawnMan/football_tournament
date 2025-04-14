@@ -7,21 +7,26 @@ const clubSchema = new mongoose.Schema(
       require: true,
       unique: true,
       trim: true,
+      min: 5,
     },
     city: {
       type: String,
       require: true,
       trim: true,
+      min: 5,
     },
     country: {
       type: String,
       require: true,
       trim: true,
+      min: 5,
     },
     foundedYear: {
       type: Number,
       require: true,
       trim: true,
+      min: 1800,
+      max: 2025,
     },
   },
   {

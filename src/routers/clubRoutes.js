@@ -6,14 +6,16 @@ import {
   getAllClubs,
   getClubById,
 } from "../controllers/index.js";
+import { clubSchema } from "../validations/clubValidation.js";
+import { validateBody } from "../middlewares/validationMiddleware.js";
 
 const router = express.Router();
 
 router
-  .post("/", createClub)
+  .post("/", validateBody(clubSchema), createClub)
   .get("/", getAllClubs)
   .get("/:id", getClubById)
   .delete("/:id", deleteClub)
-  .put("/:id", editClub);
+  .put("/:id", validateBody(clubSchema), editClub);
 
 export default router;

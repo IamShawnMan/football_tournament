@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { collections } from "../utils/dbNames";
+import { collections } from "../utils/dbNames.js";
 
 const matchSchema = new mongoose.Schema({
   matchDate: {
@@ -15,7 +15,7 @@ const matchSchema = new mongoose.Schema({
     ref: collections.team,
     require: true,
   },
-  awatTeamId: {
+  awayTeamId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: collections.team,
     require: true,

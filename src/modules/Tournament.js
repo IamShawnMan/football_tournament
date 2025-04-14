@@ -5,6 +5,7 @@ const tournamentSchema = new mongoose.Schema({
     type: String,
     require: true,
     trim: true,
+    max: 100,
   },
   startDate: {
     type: Date,
